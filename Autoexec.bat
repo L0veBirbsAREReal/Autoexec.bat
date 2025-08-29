@@ -1,4 +1,4 @@
-@echo off
+@Echo off
 echo SET SOUND=C:\PROGRA~1\CREATIVE\CTSND
 echo SET BLASTER=A220 I5 D1 H5 P330 E620 T6
 echo SET PATH=C:\Windows;C:\
@@ -98,7 +98,7 @@ cd "C:\Program Files (x86)\Notepad++"
 start notepad++.exe
 
 echo start VPNs
-"C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
+:: OFF "C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
 "C:\Program Files\Mullvad VPN\Mullvad VPN.exe"
 
 echo Play HDTV capture card output
@@ -151,8 +151,13 @@ REM start ts3client.lnk
 
 C:
 cd "C:\Program Files (x86)\Razer\Razer Cortex"
-start RazerCortex.Shell.exe
+:: start RazerCortex.Shell.exe
 ECHO R Λ Z Ξ R stuff, Razer Cortex now boots....
+start C:\Users\User\razer.bat
+      :: cd "c:\users\user\"
+      :: start RazerCortex.Shell.lnk
+      :: start RazerAxon.lnk
+      :: start RazerCentral.lnk
 echo Skip Origin.lnk [R Λ Z Ξ R now runs Origin] bloat-ware RIP 2K23 Press F to pay respects Now EA games aka ElectronicArts
 echo RIP Bethesda... Welcome to Steam move complete 2022ish...
 
@@ -190,4 +195,18 @@ echo Put Steam into away mod
 start steam://friends/status/away
 
 PAUSE
+:: [WIN]+R type ->shell:startup[ENTER] 
+:: OR
+:: explorer "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+
+:: splaces to rememeber 
+:: %APPDATA%
+:: %LOCALAPPDATA%
+:: %USERPROFILE%\AppData\Local
+:: %USERPROFILE%\AppData\Roaming
+
+echo Launching PowerShell Bypass script...
+powershell -ExecutionPolicy Bypass -File "%userprofile%\Path\To\"batchfile.ps1"
+echo Done. See "%USERPROFILE%\bat_log.csv" for selection
+::
 exit
